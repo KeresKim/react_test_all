@@ -11,6 +11,9 @@ const Post = require('./post.jsx')
 const Posts = require('./posts.jsx')
 const {withRouter} = require('react-router')
 
+// added digital clock 
+//const DigitalClock = require('./clock.jsx')
+
 const posts = require('../posts.js')
 
 let { Router,
@@ -23,13 +26,15 @@ let hashHistory = ReactRouter.useRouterHistory(History.createHashHistory)({
 })
 
 ReactDOM.render((
-  <Router history={hashHistory}>
-    <Route path="/" component={Content} >
-      <Route path="/about" component={About} />
-      <Route path="/posts" component={Posts} posts={posts}/>
-      <Route path="/posts/:id" component={Post}  posts={posts}/>
-      <Route path="/contact" component={withRouter(Contact)} />
-    </Route>
-    <Route path="/login" component={Login}/>
-  </Router>
+  <div>
+    <Router history={hashHistory}>
+      <Route path="/" component={Content} >
+        <Route path="/about" component={About} />
+        <Route path="/posts" component={Posts} posts={posts}/>
+        <Route path="/posts/:id" component={Post}  posts={posts}/>
+        <Route path="/contact" component={withRouter(Contact)} />
+      </Route>
+      <Route path="/login" component={Login}/>
+    </Router>
+  </div>
 ), document.getElementById('content'))

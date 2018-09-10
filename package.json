@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack -w",
+    "clock-build": "./node_modules/.bin/babel ./jsx_clock -d ./js",
+    "build": "npm run clock-build && ./node_modules/.bin/webpack",
     "i": "rm -rf ./node_modules && npm cache clean && npm install"
   },
   "author": "Azat Mardan",
@@ -16,6 +17,7 @@
     ]
   },
   "devDependencies": {
+    "babel-cli": "6.9.0",
     "babel-core": "6.11.4",
     "babel-loader": "6.2.4",
     "babel-preset-react": "6.5.0",
