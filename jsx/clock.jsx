@@ -1,4 +1,4 @@
-//const React = require('react')
+const React = require('react')
 //const ReactDOM = require ('react-dom')
 
 class Clock extends React.Component {
@@ -22,7 +22,9 @@ class Clock extends React.Component {
     }
   }
 
-ReactDOM.render(
-    <Clock />,
-    document.getElementById('clock-digital')
-)
+//ReactDOM.render(
+//    <Clock />,
+//    document.getElementById('clock-digital')
+//)
+
+module.exports = Clock

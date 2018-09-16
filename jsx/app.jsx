@@ -12,7 +12,7 @@ const Posts = require('./posts.jsx')
 const {withRouter} = require('react-router')
 
 // added digital clock 
-//const DigitalClock = require('./clock.jsx')
+const DigitalClock = require('./clock.jsx')
 
 const posts = require('../posts.js')
 
@@ -26,15 +26,22 @@ let hashHistory = ReactRouter.useRouterHistory(History.createHashHistory)({
 })
 
 ReactDOM.render((
-  <div>
-    <Router history={hashHistory}>
-      <Route path="/" component={Content} >
-        <Route path="/about" component={About} />
-        <Route path="/posts" component={Posts} posts={posts}/>
-        <Route path="/posts/:id" component={Post}  posts={posts}/>
-        <Route path="/contact" component={withRouter(Contact)} />
-      </Route>
-      <Route path="/login" component={Login}/>
-    </Router>
-  </div>
+  <span>
+    <div>
+      <Router history={hashHistory}>
+        <Route path="/" component={Content} >
+          <Route path="/about" component={About} />
+          <Route path="/posts" component={Posts} posts={posts}/>
+          <Route path="/posts/:id" component={Post}  posts={posts}/>
+          <Route path="/contact" component={withRouter(Contact)} />
+        </Route>
+        <Route path="/login" component={Login}/>
+      </Router>
+    </div>
+    <div>
+      <br></br>
+      <h6>Digital clock Here </h6>
+      <DigitalClock></DigitalClock>
+    </div>
+  </span>
 ), document.getElementById('content'))

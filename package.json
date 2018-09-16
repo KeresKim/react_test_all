@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clock-build": "./node_modules/.bin/babel ./jsx_clock -d ./js",
-    "build": "npm run clock-build && ./node_modules/.bin/webpack",
+    "build": "./node_modules/.bin/webpack",
     "i": "rm -rf ./node_modules && npm cache clean && npm install"
   },
   "author": "Azat Mardan",
