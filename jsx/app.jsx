@@ -13,6 +13,8 @@ const {withRouter} = require('react-router')
 
 // added digital clock 
 const DigitalClock = require('./clock.jsx')
+// added Tool-tip utility. 
+const Utiltip = require('./tooltip.jsx')
 
 const posts = require('../posts.js')
 
