@@ -12,7 +12,12 @@ class Content extends React.Component {
               <Link to="/login" activeClassName="active">
                 Log-in
               </Link>
-            </li>            
+            </li>                        
+            <li className={(this.context.router.isActive('/movieInfo'))? 'active': ''}>
+              <Link to="/movieInfo" activeClassName="active">
+                Movie Information
+              </Link>
+            </li>
             <li className={(this.context.router.isActive('/posts'))? 'active': ''}>
               <Link to="/posts" activeClassName="active">
                 Blog Sites
