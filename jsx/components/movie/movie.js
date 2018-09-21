@@ -27,6 +27,33 @@ class Movie extends React.Component {
 
     return (
       <div
+        className={styles.movie} >
+        <div className={styles.cover}>
+          <img src={movie.cover} />
+        </div>
+                
+        <div className={styles.description}>
+          <div className={styles.title}>{movie.title}</div>
+          <div className={styles.year}>{movie.year}</div>
+          <div className={styles.starring}>
+            {movie.starring.map((actor = {}, index) => (
+              <div
+                key={index}
+                className={styles.actor}>
+                {actor.name}
+              </div>
+            ))}
+          </div>
+        </div>
+        <Link
+          className={styles.closeButton}
+          to="/movieInfo/list">
+          <h2> ← ← ← Back to Movie List </h2>
+        </Link>
+      </div>
+    )
+    /*return (
+      <div
         className={styles.movie}
         style={{backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.625) 100%), url(${movie.cover})`}}>
         <div
@@ -51,7 +78,7 @@ class Movie extends React.Component {
           ←
         </Link>
       </div>
-    )
+    )*/
   }
 }
 

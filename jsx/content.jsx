@@ -18,6 +18,11 @@ class Content extends React.Component {
                 Movie Information
               </Link>
             </li>
+            <li className={(this.context.router.isActive('/store'))? 'active': ''}>
+              <Link to="/store" activeClassName="active">
+                Shopping Mall
+              </Link>
+            </li>
             <li className={(this.context.router.isActive('/posts'))? 'active': ''}>
               <Link to="/posts" activeClassName="active">
                 Blog Sites
