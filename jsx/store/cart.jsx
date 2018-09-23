@@ -6,7 +6,6 @@ const {
 class Cart extends React.Component {
   
   render() {
-    console.log(this.props.route.cartItems);
     return <div>
       {(Object.keys(this.props.route.cartItems).length == 0) ? <p>Your cart is empty</p> : '' }
        <ul>

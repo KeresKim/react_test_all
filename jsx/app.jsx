@@ -30,7 +30,6 @@ const movieFocus = require('./components/movie/movie.js')
 // shopping mall components
 const storeApp = require('./store/app.jsx')
 const storeList = require('./store/index.jsx')
-//const Modal = require('./store/modal.jsx')
 const Cart = require('./store/cart.jsx')
 const Checkout = require('./store/checkout.jsx')
 const Product = require('./store/product.jsx')
@@ -43,13 +42,13 @@ const PRODUCTS = [
   { id: 3, src: 'jsx/store/images/reactquickly-cover.jpg', title: 'React Quickly', url: 'https://www.manning.com/books/react-quickly'},
   { id: 4, src: 'jsx/store/images/fullstack-cover.png', title: 'Full Stack JavaScript', url: 'http://www.apress.com/9781484217504'}
 ]
+
 let cartItems = {}
 const addToCart = (id) => {
   if (cartItems[id])
     cartItems[id] += 1
   else
     cartItems[id] = 1
-  console.log(cartItems);
 }
 
 let IsModalOn = {}
